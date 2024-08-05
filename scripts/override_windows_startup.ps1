@@ -21,7 +21,7 @@ WshShell.Run """$workDir\override.exe"" -c ""$configFilePath""", 0, False
     # 创建批处理文件并写入内容
     Set-Content -Path $batFilePath -Value $batContent -Force
 
-    Write-Output "Setup complete. override.exe will run at startup with configuration from $configFilePath."
+    Write-Output "Setup complete. override.exe will run at startup with configuration from $configFilePath. `n"
 
     # 执行 VBS 脚本
     Start-Process -FilePath $batFilePath
